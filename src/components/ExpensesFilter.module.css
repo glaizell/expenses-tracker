@@ -1,0 +1,20 @@
+.selectedYear {
+  background-color: #e6eaea;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border: 1px solid #062c30;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 2px;
+}
+.selectedYear option {
+  font: inherit;
+}
+.filteredSelectedYear {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}

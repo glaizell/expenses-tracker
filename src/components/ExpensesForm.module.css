@@ -1,0 +1,74 @@
+.btnAddNew,
+.btnAdd {
+  font: inherit;
+  background-color: #062c30;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: 1px solid #05595b;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  color: #e6eaea;
+  cursor: pointer;
+}
+.btnAddNew {
+  align-self: flex-end;
+}
+.btnAdd:hover,
+.btnAddNew:hover {
+  background-color: #05595b;
+}
+.btnAdd {
+  margin-right: 1rem;
+}
+
+.btnContainer,
+.btnAddNewContainter {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.btnCancel {
+  font: inherit;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: 1px solid #05595b;
+  color: #031618;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btnCancel:hover {
+  background-color: #062c30;
+  color: #e6eaea;
+}
+.formContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2rem;
+  column-gap: 2rem;
+  background-color: #062c30;
+  padding: 1.5rem 2.5rem;
+  border-radius: 1rem;
+  width: 70rem;
+  max-width: 100%;
+  margin: 2rem auto;
+}
+
+.expensesData {
+  margin-bottom: 1.5rem;
+}
+.expensesData label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.expensesData input {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #e6eaea;
+  width: 30rem;
+  max-width: 100%;
+}

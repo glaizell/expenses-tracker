@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import ExpensesForm from './components/ExpensesForm';
+import ExpensesList from './components/ExpensesList';
 import './App.css';
+import ExpensesFilter from './components/ExpensesFilter';
 
 function App() {
+  const [expenses, setExpenses] = useState([]);
+
+  const [filteredYear, setFilteredYear] = React.useState('2022');
+
+  const filteredExpenses = expenses.filter((expense) => {
+    return expense.date.getFullYear().toString() === filteredYear;
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <h1>Expenses Tracker</h1>
+
+      <ExpensesForm expenses={expenses} setExpenses={setExpenses} />
+      <ExpensesFilter
+        expenses={expenses}
+        filteredYear={filteredYear}
+        setFilteredYear={setFilteredYear}
+      />
+      <ExpensesList expenses={filteredExpenses} setExpenses={setExpenses} />
     </div>
   );
 }
